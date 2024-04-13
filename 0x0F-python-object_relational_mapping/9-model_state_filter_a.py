@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module that retrieves and prints the first state\
-        from a MySQL database using SQLAlchemy."""
+"""Module retrieves and prints the states with\
+        letter a from a MySQL database using SQLAlchemy."""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,8 +15,6 @@ if __name__ == "__main__":
 
     session = Session()
 
-    state = session.query(State).order_by(State.id).first()
-    if state is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(state.id, state.name))
+    for state in session.query(State).order_by(State.id):
+        if "a" in state.name:
+            print("{}: {}".format(state.id, state.name))
