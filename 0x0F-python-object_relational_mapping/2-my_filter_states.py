@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" takes an argument and displays all values in the states table """
+""" takes argument and displays values in states table """
 import MySQLdb
 import sys
 
