@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
-""" model state """
+"""create_engine"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base(metadata=mymetadata)
+Base = declarative_base()
 
 
 class State(Base):
