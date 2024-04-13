@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ model state """
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
