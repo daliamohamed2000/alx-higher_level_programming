@@ -17,7 +17,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     # Create a session object
     session = Session()
+    # Retrieve cities and their associated states from the database
+    # by joining the City and State tables based on the state_id
+    # and ordering the results by city ID
     for city, state in session.query(City, State) \
                               .filter(City.state_id == State.id) \
                               .order_by(City.id):
+        # Print the city and state information
         print("{}: ({}) {}".format(state.name, city.id, city.name))
