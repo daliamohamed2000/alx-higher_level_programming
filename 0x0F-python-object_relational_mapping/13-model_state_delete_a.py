@@ -12,8 +12,11 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
 
+    # Create a session factory
     Session = sessionmaker(bind=engine)
+    # Create a session object
     session = Session()
+    # Retrieve all states from the database
     for state in session.query(State):
         # Check if the state's name contains the letter "a"
         if "a" in state.name:
