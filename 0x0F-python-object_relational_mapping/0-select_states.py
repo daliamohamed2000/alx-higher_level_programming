@@ -13,4 +13,4 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
         c.close()
-        db.close
+        db.close()
