@@ -11,9 +11,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 4:
         exit(1)
     #create the sqlalchemy
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]), 
-                           pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     #create a session factor
     Session = sessionmaker(bind=engine)
 
