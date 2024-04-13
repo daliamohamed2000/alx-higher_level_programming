@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' takes argument and displays values '''
+""" script that lists all states from the database """
 import MySQLdb
 import sys
 
