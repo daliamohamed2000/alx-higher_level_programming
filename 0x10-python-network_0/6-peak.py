@@ -4,7 +4,7 @@
 
 
 def find_peak(list_of_integers):
-      """
+    """
     Args:
         list_of_integers(int): list of integers to find peak of
     Returns: peak of list_of_integers or None
